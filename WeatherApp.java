@@ -17,7 +17,7 @@ public class WeatherApp {
         System.out.println(location.toUpperCase() + ":");
 
         HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://api.openweathermap.org/data/2.5/weather?appid=e4714b95ae8eb1ffbe7c32316b0108c7&q=" + realLocation)).build();
+        HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://api.openweathermap.org/data/2.5/weather?appid=e4714b95no7c32316b0108c7&q=" + realLocation)).build();
         client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
                 .thenApply(HttpResponse::body)
                 .thenApply(WeatherApp::parse)
